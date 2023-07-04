@@ -2,12 +2,12 @@
     $passwordLength = intval($_GET['passwordLength']);
     function generatePassword($length){
         $password = '';
-        $letters = 'qwertyuioplkjhgfdsazxcvbnm';
+        $letters = 'qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNMè+òàù,.-!"£$%&/()=?^|é*§°ç;:_@#[]';
         for($i=0; $i<$length; $i++){
             if($i % 2 === 0){
                 $password .= rand(0,9);
             } else {
-                $password .= substr($letters, rand(0,9), 1);
+                $password .= substr($letters, rand(0, strlen($letters)), 1);
             };
         };
 

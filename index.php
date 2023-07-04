@@ -1,7 +1,5 @@
 <?php 
     $passwordLength = intval($_GET['passwordLength']);
-    echo generatePassword($passwordLength);
-
     function generatePassword($length){
         $password = '';
         $letters = 'qwertyuioplkjhgfdsazxcvbnm';
@@ -30,5 +28,6 @@
         <input type="number" name="passwordLength" id="password_length" placeholder="Type the desired password length">
         <input type="submit" value="Generate">
     </form>
+    <pre class="m-5 fs-5 text-center"><?php echo generatePassword($passwordLength);?></pre>
 </body>
 </html>
